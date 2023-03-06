@@ -10,7 +10,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const apiKey = process.env.API_KEY;
-const apiUrl = "https://api.meaningcloud.com/sentiment-2.1";
+// const apiUrl = "https://api.meaningcloud.com/sentiment-2.1";
 
 const app = express();
 app.use(cors());
