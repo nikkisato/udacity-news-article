@@ -47,10 +47,7 @@ app.post("/data", (req, res) => {
     },
   };
 
-  const response = fetch(
-    `https://api.meaningcloud.com/sentiment-2.1?&key=${process.env.API_KEY}&lang=en&txt=${req.body}`,
-    requestOptions
-  )
+  const response = fetch(`https://api.meaningcloud.com/sentiment-2.1?`, requestOptions)
     .then((response) => ({
       status: response.status,
       body: response.json(),
