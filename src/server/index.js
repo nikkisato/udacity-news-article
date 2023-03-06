@@ -35,7 +35,7 @@ app.post("/data", (req, res) => {
   const formdata = new FormData();
 
   formdata.append("key", apiKey);
-  formdata.append("txt", req.body);
+  formdata.append("url", req.body);
   formdata.append("lang", "en");
 
   const requestOptions = {
@@ -46,6 +46,8 @@ app.post("/data", (req, res) => {
       "Content-Type": "application/json",
     },
   };
+
+  // https://www.opb.org/article/2023/03/03/think-out-loud-conversation-oregon-governor-tina-kotek/
 
   const response = fetch(`https://api.meaningcloud.com/sentiment-2.1`, requestOptions)
     .then((response) => ({
