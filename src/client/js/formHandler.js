@@ -21,11 +21,22 @@ async function handleSubmit(event) {
     if (rawData.status == "200") {
       const data = await rawData.json();
       console.log(data);
-      document.getElementById("results").innerHTML = data.score_tag;
+      updateUI(data);
     }
   } else {
     document.getElementById("result").innerHTML = "No message to send";
   }
 }
+
+function updateUI(data) {
+  document.getElementById("score_tag").innerHTML = `Score Tag: ${data.score_tag}`;
+  document.getElementById("model").innerHTML = `Model: ${data.model}`;
+  document.getElementById("agreement").innerHTML = `Agreement: ${data.agreement}`;
+  document.getElementById("subjectivity").innerHTML = `Subjectivity: ${data.subjectivity}`;
+  document.getElementById("confidence").innerHTML = `Confidence: ${data.confidence}`;
+  document.getElementById("irony").innerHTML = `Irony: ${data.irony}`;
+}
+
+export default updateUI;
 
 export { handleSubmit };
