@@ -3,7 +3,7 @@ async function handleSubmit(event) {
 
   let formText = document.getElementById("url").value;
 
-  if (formText.value != "") {
+  if (formText.value != "" && formText.length > 1) {
     const rawData = await fetch("http://localhost:8081/postData", {
       method: "POST",
       credentials: "same-origin",
@@ -17,7 +17,7 @@ async function handleSubmit(event) {
       updateUI(data);
     }
   } else {
-    document.getElementById("result").innerHTML = "No message to send";
+    alert("Please input a valid URL");
   }
 }
 
