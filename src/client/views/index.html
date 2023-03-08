@@ -21,12 +21,12 @@
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
                     <input id="url" type="text" name="url" value="" placeholder="URL">
-                    <input type="submit" name="url" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                    <input type="submit" name="url" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             </section>
 
             <section>
-                <strong>Form Results:</strong>
+                <strong>Form Results Status:</strong>
                 <div id="results"></div>
             </section>
         </main>
