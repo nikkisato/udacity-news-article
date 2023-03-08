@@ -31,9 +31,9 @@ app.get("/test", function (req, res) {
 
 app.post("/postData", async (req, res) => {
   console.log("Getting Data");
-
   let formText = req.body.url;
   const baseURL = "https://api.meaningcloud.com/sentiment-2.1?";
+
 
   const result = await fetch(`${baseURL}&key=${apiKey}&lang=en&url=${formText}`, {
     method: "POST",
