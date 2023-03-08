@@ -2,11 +2,14 @@
 
 ## Production Description
 
+A Full Stack Application utilizing webpack and service workers, Node.js and Express, and unit testing with Jest. Grab a News Article Url and see for yourself!
+
 ## How to Run the App
 
 - 1st npm run install to install the package
 - 2nd run npm run build-prod to get the dist folder
-- 3rd run npm run start to open localhost:8080
+- 3rd run npm run start to open localhost:8081
+- 4th open localhost:8081 and grab a news article url
 
 ## Dependencies
 
